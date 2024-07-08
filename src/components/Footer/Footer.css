@@ -1,0 +1,362 @@
+:root {
+  --cardBG: rgb(225, 225, 235);
+  --whiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 4%, 36%);
+  --greyText: rgb(190, 190, 190);
+  --bodyColor: rgb(240, 240, 246);
+  --inputColor: rgb(239, 239, 239);
+  --blackColor: hsl(201, 33%, 16%);
+  --whiteColorDeam: hsl(0, 0, 93%);
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gardientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+}
+
+.footer {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .videoDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.footer .videoDiv video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer .videoDiv::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  mix-blend-mode: multiply;
+  background: rgba(10, 84, 107, 0.307);
+}
+
+.footer .secContent {
+  width: 100%;
+  margin: auto;
+  z-index: 100;
+  row-gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 2.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .secContent .contactDiv {
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .secContent .contactDiv .text small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .text h2 {
+  font-size: 1.8rem;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv {
+  gap: 1rem;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .secContent .contactDiv .inputDiv input {
+  width: 100%;
+  outline: none;
+  border-radius: 3rem;
+  padding: .5rem .6rem;
+  background: transparent;
+  color: var(--whiteColor);
+  border: 1px solid var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv input::-webkit-input-placeholder {
+  opacity: .5;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv input:-ms-input-placeholder {
+  opacity: .5;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv input::-ms-input-placeholder {
+  opacity: .5;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv input::placeholder {
+  opacity: .5;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv .btn {
+  gap: .5rem;
+  width: 100%;
+  font-weight: 500;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+}
+
+.footer .secContent .contactDiv .inputDiv .btn .icon {
+  font-size: 18px;
+}
+
+.footer .secContent .footerCard {
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 1rem 4rem;
+  background: var(--bodyColor);
+}
+
+.footer .secContent .footerCard .footerIntro {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  row-gap: .5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .secContent .footerCard .footerIntro .logoDiv .logo {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.footer .secContent .footerCard .footerIntro .logoDiv .logo .icon {
+  font-size: 25px;
+  margin-right: 10px;
+  color: var(--PrimaryColor);
+}
+
+.footer .secContent .footerCard .footerIntro .footerParagraph {
+  font-size: 13px;
+  color: var(--textColor);
+}
+
+.footer .secContent .footerCard .footerIntro .footerSocials {
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+}
+
+.footer .secContent .footerCard .footerIntro .footerSocials .icon {
+  font-size: 20px;
+  color: var(--blackColor);
+}
+
+.footer .secContent .footerCard .footerIntro .footerSocials .icon:hover {
+  color: var(--PrimaryColor);
+}
+
+.footer .secContent .footerCard .footerIntro .footerLinks {
+  gap: 1rem;
+  width: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .secContent .footerCard .footerIntro .footerLinks .linkGroup .groupTitle {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  color: var(--blackColor);
+}
+
+.footer .secContent .footerCard .footerIntro .footerLinks .linkGroup .footerList {
+  font-size: 15px;
+  color: var(--textColor);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.footer .secContent .footerCard .footerIntro .footerLinks .linkGroup .icon {
+  font-size: 15px;
+  color: var(--greyText);
+}
+
+.footer .secContent .footerCard .footerIntro .footerDiv {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: var(--SecondaryColor);
+  padding: .5rem 2rem;
+}
+
+.footer .secContent .footerCard .footerIntro .footerDiv small {
+  font-size: 10px;
+  color: var(--whiteColor);
+}
+
+@media screen and (min-width: 500px) {
+  .footer .secContent .footerCard .footerLinks {
+    padding-bottom: 1rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .secContent .footerCard .footerDiv {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .secContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--whiteColor);
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .footer .secContent .contactDiv {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .secContent .contactDiv .inputDiv {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer .secContent .contactDiv .inputDiv input {
+    width: 60%;
+  }
+  .footer .secContent .contactDiv .inputDiv .btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .secContent .footerCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    padding-bottom: 1rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .secContent .footerCard {
+    padding: 3rem 1rem;
+  }
+  .footer .secContent .footerCard .footerIntro .footerParagraph {
+    font-size: 15px;
+    color: var(--textColor);
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials {
+    -webkit-column-gap: .5rem;
+            column-gap: .5rem;
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials .icon {
+    font-size: 25px;
+    color: var(--textColor);
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials .icon:hover {
+    color: var(--PrimaryColor);
+  }
+  .footer .secContent .footerCard .footerLinks .linkGroup .footerList {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

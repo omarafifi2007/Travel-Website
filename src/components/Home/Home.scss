@@ -1,0 +1,246 @@
+:root {
+    --cardBG: rgb(225, 225, 235);
+    --whiteColor: hsl(0, 0%, 100%);
+    --textColor: hsl(240, 4%, 36%);
+    --greyText: rgb(190, 190, 190);
+    --bodyColor: rgb(240, 240, 246);
+    --inputColor: rgb(239, 239, 239);
+    --blackColor: hsl(201, 33%, 16%);
+    --whiteColorDeam: hsl(0, 0, 93%);
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gardientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+}
+
+.home {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+    .overlay {
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        mix-blend-mode: hard-light;
+        background: rgb(47, 106, 127);
+    }
+
+    video {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .homeContent {
+        width: 100%;
+        margin: auto;
+        z-index: 100;
+        row-gap: 3rem;
+        display: flex;
+        height: max-content;
+        align-items: stretch;
+        flex-direction: column;
+        color: var(--whiteColor);
+        padding: 8rem 1.5rem 3rem;
+
+        .textDiv {
+            padding: 2rem 0;
+
+            .smallText {
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            .homeTitle {
+                font-size: 1.8rem;
+                position: relative;
+            }
+        }
+
+        .cardDiv {
+            gap: 1rem;
+            position: relative;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            background: var(--whiteColor);
+
+            label {
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                padding-bottom: 10px;
+                color: var(--textColor);
+            }
+
+            .label_total {
+                align-items: center;
+                justify-content: space-between;
+
+                .total {
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                    color: var(--textColor);
+                }
+            }
+
+            .input {
+                height: 40px;
+                padding: 0 1rem;
+                border-radius: 3rem;
+                background: var(--inputColor);
+
+                input {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 13px;
+                    font-weight: 500;
+
+                    &::placeholder {
+                        font-size: 13px;
+                    }
+                }
+
+                .icon {
+                    font-size: 18px;
+                    margin-left: 10px;
+                    color: var(--PrimaryColor) !important;
+                }
+
+                .input[type=range] {
+                    background: blue;
+                }
+            }
+
+            .searchOptions {
+                left: 50%;
+                bottom: -0.7rem;
+                column-gap: .8rem;
+                padding: 15px 1rem;
+                position: absolute;
+                width: max-content;
+                border-radius: 3rem;
+                justify-content: center;
+                transform: translate(-50%);
+                background: var(--gardientColor);
+
+                &:hover {
+                    background: var(--PrimaryColor);
+                }
+
+                .icon {
+                    font-size: 18px;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .homeFooterIcons {
+            width: 100%;
+            justify-content: space-between;
+
+            .icon {
+                margin: 0 5px;
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--whiteColor);
+
+                &:hover {
+                    color: var(--PrimaryColor);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .home {
+        .homeContent {
+            .textDiv {
+                .smallText {
+                    font-size: 16px;
+                }
+
+                .homeTitle {
+                    font-size: 2.3rem;
+                    position: relative;
+                    width: max-content;
+
+                    &::after {
+                        content: '';
+                        right: 0;
+                        height: 5px;
+                        bottom: 5px;
+                        z-index: -1;
+                        width: 145px;
+                        position: absolute;
+                        background: var(--SecondaryColor);
+                    }
+                }
+            }
+
+            .cardDiv {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .home {
+        .homeContent {
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .home {
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 80vh;
+
+        .homeContent {
+            padding-left: 0;
+            padding-right: 0;
+
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+
+                .input {
+                    margin-bottom: 1rem;
+                }
+
+                .searchOptions {
+                    bottom: -1rem;
+                    padding: 8px 1rem;
+
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
